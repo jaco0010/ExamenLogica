@@ -5,3 +5,4 @@ Se utilizó scanner.nextLine(); para capturar cadenas de texto, asegurando que s
 Se añadió una llamada a scanner.nextLine() después de la lectura de enteros (nextInt()) para limpiar el búfer de entrada y evitar que se salten las lecturas posteriores de cadenas de texto.
 Se implementaron los cálculos de pago por proyecto, subtotal, descuentos, impuestos y total final, utilizando las fórmulas proporcionadas en el enunciado.
 Se estructuró y formateó la salida del reporte para mostrar claramente la información del programador, los proyectos, los pagos y los totales calculados.
+😈😈😈😈😈😈😈😱😱😱😱😱
