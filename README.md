@@ -1,42 +1,69 @@
 
+# 💻 Estimador de Presupuesto para Desarrollo de Videojuegos Indie
 
-                         🛠 *CORRECIONES*🥇
+## 🎮 Descripción
 
+Este programa en Java permite a estudios de desarrollo de videojuegos indie, como **IndieDreams**, estimar el presupuesto de su próximo proyecto. Calcula el costo total considerando horas de desarrollo, tarifas por hora, licencias de software y gastos adicionales. Además, incluye honorarios administrativos e imprevistos para una estimación más precisa.
 
+---
 
+## 🐞 Errores Encontrados y Correcciones
 
-💫Importación de Clases Necesarias: 
+### 1. **Uso Incorrecto de `Scanner`**
 
-Se añadió la importación de Scanner y LocalDate al inicio del código para permitir la entrada de datos y la captura de la fecha actual, respectivamente.
+- **Problema:** Se intentaba crear una instancia de `Scanner` con `new scanner(system)`, lo cual es incorrecto.
+- **Solución:** Se corrigió a `new Scanner(System.in)` para leer la entrada estándar del usuario.
 
-✔Corrección de Errores de Sintaxis:
+### 2. **Errores de Sintaxis en la Captura de Datos**
 
-Se corrigieron errores de sintaxis, como el uso incorrecto de System.out.print sin paréntesis y la falta de punto y coma al final de las líneas.
+- **Problema:** Se utilizaban métodos incorrectos como `nextline()` y `nex()`, y se omitían paréntesis en `System.out.print`.
+- **Solución:** Se reemplazaron por `nextLine()` y se añadieron los paréntesis faltantes en los métodos de impresión.
 
+### 3. **Declaración Incorrecta de Variables**
 
-💢Inicialización Correcta de Variables:
+- **Problema:** Se declararon variables como `tarifaBase = 50,0,0;`, lo cual no es válido en Java.
+- **Solución:** Se corrigió a `tarifaBase = 50.0;` para asignar un valor numérico válido.
 
-Se inicializaron correctamente las variables tarifaBase, tarifaNivel y tarifaExperiencia con valores numéricos válidos.
+### 4. **Falta de Inicialización de Variables**
 
+- **Problema:** Variables como `horasProyecto1`, `horasProyecto2`, `horasProyecto3` no se inicializaban antes de su uso.
+- **Solución:** Se añadió la captura de datos para estas variables antes de su utilización en los cálculos.
 
-💦Captura de Datos de Entrada:
+### 5. **Errores Tipográficos en Variables y Métodos**
 
-Se utilizó scanner.nextLine(); para capturar cadenas de texto, asegurando que se lea la línea completa ingresada por el usuario.
+- **Problema:** Se encontraron errores tipográficos como `bonusCliene1` y `horasProyec1`.
+- **Solución:** Se corrigieron a `bonusCliente1` y `horasProyecto1` respectivamente.
 
+### 6. **Cálculos Incorrectos de Pagos y Totales**
 
-❗Manejo del Búfer de Entrada:
+- **Problema:** Se realizaban cálculos con variables no inicializadas o mal declaradas.
+- **Solución:** Se aseguraron las inicializaciones correctas y se ajustaron los cálculos para reflejar los valores adecuados.
 
-Se añadió una llamada a scanner.nextLine() después de la lectura de enteros (nextInt() para limpiar el búfer de entrada y evitar que se salten las lecturas posteriores de cadenas de texto.
+---
 
+## 🧠 Uso de Inteligencia Artificial
 
-🐱‍👤Cálculos de Pagos y Totales:
+Para mejorar la calidad del código y corregir errores, se utilizó **ChatGPT** de OpenAI. Esta herramienta asistió en:
 
-Se implementaron los cálculos de pago por proyecto, subtotal, descuentos, impuestos y total final, utilizando las fórmulas proporcionadas en el enunciado.
+- Identificación de errores de sintaxis y lógica.
+- Sugerencias para mejorar la estructura del código.
+- Propuestas para optimizar el flujo de entrada y salida de datos.
 
+---
 
-✨Generación de Reporte:
+## 📚 Fuentes Consultadas
 
-Se estructuró y formateó la salida del reporte para mostrar claramente la información del programador, los proyectos, los pagos y los totales calculados.
+- [Documentación oficial de Java](https://docs.oracle.com/javase/8/docs/api/)
+- [Guía para crear READMEs Profesionales](https://github.com/Organization-DevXP/Guia-para-crear-READMEs-Profesionales)
+- [Cómo escribir un buen archivo README](https://barrosjss.medium.com/c%C3%B3mo-escribir-un-buen-archivo-readme-80afd95db46b)
+- [Crea un buen README para tu proyecto en Github](https://www.corecode.school/blog/como-crear-un-buen-readme)
 
+---
 
+## 🚀 Instalación y Uso
+
+1. Clona este repositorio en tu máquina local:
+
+   ```bash
+   git clone https://github.com/tuusuario/estimador-presupuesto-videojuegos.git
 
