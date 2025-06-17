@@ -1,69 +1,51 @@
 
-# 💻 Estimador de Presupuesto para Desarrollo de Videojuegos Indie
+# 🧑‍💻 Calculadora de Tarifas para Programadores Freelance
 
-## 🎮 Descripción
+Este programa en Java permite calcular la tarifa por hora de un programador freelance, teniendo en cuenta su nivel de experiencia, años de experiencia, tipo de contrato y bonos adicionales por cliente. Además, genera un reporte detallado con la información ingresada y el cálculo final.
 
-Este programa en Java permite a estudios de desarrollo de videojuegos indie, como **IndieDreams**, estimar el presupuesto de su próximo proyecto. Calcula el costo total considerando horas de desarrollo, tarifas por hora, licencias de software y gastos adicionales. Además, incluye honorarios administrativos e imprevistos para una estimación más precisa.
+## 🛠️ Errores Encontrados y Corregidos
 
----
+### 1. **Uso incorrecto de `Scanner`** ❌
 
-## 🐞 Errores Encontrados y Correcciones
+**Problema:**  
+Se instanciaba el objeto `Scanner` de manera incorrecta: `new scanner(system)`.
 
-### 1. **Uso Incorrecto de `Scanner`**
+**Solución:**  
+Se corrigió a `new Scanner(System.in)`, que es la forma adecuada de crear un objeto `Scanner` para leer desde la entrada estándar.
 
-- **Problema:** Se intentaba crear una instancia de `Scanner` con `new scanner(system)`, lo cual es incorrecto.
-- **Solución:** Se corrigió a `new Scanner(System.in)` para leer la entrada estándar del usuario.
+### 2. **Método `nextLine()` no funcionando correctamente después de `nextInt()`** 🔄
 
-### 2. **Errores de Sintaxis en la Captura de Datos**
+**Problema:**  
+Al usar `nextInt()` seguido de `nextLine()`, el método `nextLine()` no capturaba la entrada correctamente, debido a que `nextInt()` no consume el salto de línea (`\n`) dejado por el Enter.
 
-- **Problema:** Se utilizaban métodos incorrectos como `nextline()` y `nex()`, y se omitían paréntesis en `System.out.print`.
-- **Solución:** Se reemplazaron por `nextLine()` y se añadieron los paréntesis faltantes en los métodos de impresión.
+**Solución:**  
+Se añadió una llamada adicional a `sc.nextLine()` después de cada `nextInt()` para consumir el salto de línea pendiente.
 
-### 3. **Declaración Incorrecta de Variables**
+### 3. **Errores de sintaxis y tipográficos** 📝
 
-- **Problema:** Se declararon variables como `tarifaBase = 50,0,0;`, lo cual no es válido en Java.
-- **Solución:** Se corrigió a `tarifaBase = 50.0;` para asignar un valor numérico válido.
+**Problema:**  
+Existen varios errores de sintaxis y tipográficos, como:
+- Uso incorrecto de comas en lugar de puntos en valores decimales.
+- Métodos mal escritos como `nextline()` en lugar de `nextLine()`.
+- Variables no declaradas o mal nombradas.
 
-### 4. **Falta de Inicialización de Variables**
+**Solución:**  
+Se corrigieron todos los errores de sintaxis y se estandarizó el uso de la convención de nomenclatura en Java.
 
-- **Problema:** Variables como `horasProyecto1`, `horasProyecto2`, `horasProyecto3` no se inicializaban antes de su uso.
-- **Solución:** Se añadió la captura de datos para estas variables antes de su utilización en los cálculos.
+### 4. **Cálculos incorrectos en el pago por proyecto** 💰
 
-### 5. **Errores Tipográficos en Variables y Métodos**
+**Problema:**  
+Las fórmulas para calcular el pago por proyecto contenían errores de sintaxis y lógica, como el uso de variables no declaradas o mal nombradas.
 
-- **Problema:** Se encontraron errores tipográficos como `bonusCliene1` y `horasProyec1`.
-- **Solución:** Se corrigieron a `bonusCliente1` y `horasProyecto1` respectivamente.
+**Solución:**  
+Se revisaron y corrigieron todas las fórmulas de cálculo, asegurando que las variables estén correctamente declaradas y utilizadas.
 
-### 6. **Cálculos Incorrectos de Pagos y Totales**
+### 5. **Falta de importación de clases necesarias** 📦
 
-- **Problema:** Se realizaban cálculos con variables no inicializadas o mal declaradas.
-- **Solución:** Se aseguraron las inicializaciones correctas y se ajustaron los cálculos para reflejar los valores adecuados.
+**Problema:**  
+No se importaban las clases necesarias para el funcionamiento del programa, como `Scanner` y `LocalDate`.
 
----
+**Solución:**  
+Se añadieron las importaciones correspondientes al inicio del archivo:
 
-## 🧠 Uso de Inteligencia Artificial
-
-Para mejorar la calidad del código y corregir errores, se utilizó **ChatGPT** de OpenAI. Esta herramienta asistió en:
-
-- Identificación de errores de sintaxis y lógica.
-- Sugerencias para mejorar la estructura del código.
-- Propuestas para optimizar el flujo de entrada y salida de datos.
-
----
-
-## 📚 Fuentes Consultadas
-
-- [Documentación oficial de Java](https://docs.oracle.com/javase/8/docs/api/)
-- [Guía para crear READMEs Profesionales](https://github.com/Organization-DevXP/Guia-para-crear-READMEs-Profesionales)
-- [Cómo escribir un buen archivo README](https://barrosjss.medium.com/c%C3%B3mo-escribir-un-buen-archivo-readme-80afd95db46b)
-- [Crea un buen README para tu proyecto en Github](https://www.corecode.school/blog/como-crear-un-buen-readme)
-
----
-
-## 🚀 Instalación y Uso
-
-1. Clona este repositorio en tu máquina local:
-
-   ```bash
-   git clone https://github.com/tuusuario/estimador-presupuesto-videojuegos.git
 
